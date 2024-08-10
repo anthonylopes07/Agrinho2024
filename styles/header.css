@@ -16,6 +16,7 @@
 }
 
 .cabeçalho {
+    color: #000000;
     background-color: var(--branco);
     display: flex;
     justify-content: space-between;
