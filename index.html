@@ -134,26 +134,22 @@
     <h2 class="carrossel__titulo">Veja Alguns Produtos</h2>
 
     <div class="carrossel__container">
-        <!-- Slider main container -->
-        <div class="swiper">
-            <div class="swiper-pagination"></div>
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="img/abacate.jpg" alt="abacate"></div>
-                <div class="swiper-slide"><img src="img/banana.jpg" alt="banana"></div>
-                <div class="swiper-slide"><img src="img/cara.jpg" alt="Cara"></div>
-                <div class="swiper-slide"><img src="img/conservas salgadas.jpg" alt="conservas"></div>
-                <div class="swiper-slide"><img src="img/bolsas artesanais.jpg" alt="bolsas artesanais"></div>
-                <div class="swiper-slide"><img src="img/doces4.jpg" alt="Doces"></div>
-                <div class="swiper-slide"><img src="img/amiguru.jpg" alt="Doces"></div>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="img/abacate.jpg" alt="abacate"></div>
+                <div class="slide"><img src="img/banana.jpg" alt="banana"></div>
+                <div class="slide"><img src="img/cara.jpg" alt="Cara"></div>
+                <div class="slide"><img src="img/conservas salgadas.jpg" alt="conservas"></div>
+                <div class="slide"><img src="img/bolsas artesanais.jpg" alt="bolsas artesanais"></div>
+                <div class="slide"><img src="img/doces4.jpg" alt="Doces"></div>
+                <div class="slide"><img src="img/amiguru.jpg" alt="Doces"></div>
             </div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
         </div>
     </div>
 </section>
+
 
 
   <section class="contato">
@@ -174,7 +170,7 @@
   </footer>
 
 <script>
-    let currentSlide = 0;
+   let currentSlide = 0;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
@@ -196,6 +192,7 @@ function moveSlide(step) {
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
 });
+
 
   </script>
 </body>
