@@ -6,6 +6,7 @@
 @import url("styles/rodape.css");
 
 :root {
+    color: #000000;
     --cor-de-fundo: #F5F5DC; /* Bege claro */
     --branco: #FFFFFF;
     --verde: #4CAF50; /* Verde */
