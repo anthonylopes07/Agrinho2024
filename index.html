@@ -78,25 +78,23 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide"><img src="img/abacate.jpg"
-              alt="abacate"></div>
-          <div class="swiper-slide"><img src="img/banana.jpg"
-              alt="banana"></div>
-          <div class="swiper-slide">
-            <img src="img/cara.jpg" alt="Cara" > </div>
-          <div class="swiper-slide">
-            <img src="img/conservas salgadas.jpg" alt="conservas" >
+          <div class="swiper-slide"><img src="img/alface2.jpg"
+              alt="alface"></div>
+          <div class="swiper-slide"><img src="img/doces5.jpg"
+              alt="doces"></div>
+          <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alura books">
           </div>
           <div class="swiper-slide">
-            <img src="img/bolsas artesanais.jpg" alt="bolsas artesanais" >
-          </div>''
-        <div class="swiper-slide">
-          <img src="img/doces4.jpg" alt="Doces">
+            <img src="img/Guia Front-end.svg" alt="Livro Guia front end" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/Portugol.svg" alt="Livro sobre portugol" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/Acessibilidade.svg" alt="Livro sobre acessibilidade" />
+          </div>
         </div>
-      <div class="swiper-slide">
-        <img src="img/amiguru.jpg" alt="Doces">
-      </div>
-    </div>
+
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -130,26 +128,64 @@
 
   </section>
 
-  <section class="carrossel">
-    <h2 class="carrossel__titulo">Veja Alguns Produtos</h2>
+  <section class=”carrossel”>
+    <h2 class="carrossel__titulo">Mais vendidos</h2>
 
     <div class="carrossel__container">
-        <div class="slider">
-            <div class="slides">
-                <div class="slide"><img src="img/abacate.jpg" alt="abacate"></div>
-                <div class="slide"><img src="img/banana.jpg" alt="banana"></div>
-                <div class="slide"><img src="img/cara.jpg" alt="Cara"></div>
-                <div class="slide"><img src="img/conservas salgadas.jpg" alt="conservas"></div>
-                <div class="slide"><img src="img/bolsas artesanais.jpg" alt="bolsas artesanais"></div>
-                <div class="slide"><img src="img/doces4.jpg" alt="Doces"></div>
-                <div class="slide"><img src="img/amiguru.jpg" alt="Doces"></div>
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">❮</button>
-            <button class="next" onclick="moveSlide(1)">❯</button>
-        </div>
-    </div>
-</section>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="img/ApacheKafka.svg"
+              alt="Livro sobre apache kafka e spring boot da alura books"></div>
+          <div class="swiper-slide"><img src="img/Liderança.svg" alt="Livro sobre liderança em design da alura books">
+          </div>
+          <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alurabooks">
+          </div>
+          <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Livro Guia front end"></div>
+          <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre portugol"></div>
+          <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade"></div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="card">
+        <!-- 1º linha -->
+        <div class="card__descrição">
+          <!-- 1º coluna -->
+          <div class="descrição">
+            <img src="img/Estrelinhas.svg" alt="Avaliação 5 estrelas">
+            <h3 class="descrição__titulo">Autora do Mês</h3>
+            <h2 class="descrição__titulo-livro">Juliana Agarikov</h2>
+            <p class="descrição__texto">Analista de sistemas e escritora, Juliana é especialista em
+              Front-End.
+            </p>
+          </div>
+          <!-- 2º coluna -->
+          <img src="img/Escritora.svg" class="descrição__imagem">
+        </div>
+
+        <!-- 2º linha -->
+        <div class="card__botões">
+          <!-- 1º coluna -->
+          <ul class="botões">
+            <li class="botões__item"><img src="img/Favoritos.svg" alt="Favoritar livro"></li>
+            <li class="botões__item"><img src="img/Compras.svg" alt="Adicionar no carrinho de compras"></li>
+          </ul>
+          <!-- 2º coluna -->
+          <a href="#" class="botões__ancora">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
 
 
   <section class="contato">
@@ -169,31 +205,16 @@
      
   </footer>
 
-<script>
-   let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-    const offset = -currentSlide * 100;
-    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-}
-
-function moveSlide(step) {
-    showSlide(currentSlide + step);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
-});
-
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+    });
   </script>
 </body>
 
