@@ -73,4 +73,60 @@ body {
     cursor: pointer;
     padding: 10px;
   }
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  .produtores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  .produtor {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1em;
+    padding: 1em;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  
+  .galeria img {
+    width: 30%;
+    border-radius: 8px;
+  }
+  
+  .produtor h2, .produtor p, .produtor a {
+    margin: 0.5em 0;
+  }
+  
+  .produtor a {
+    color: #4CAF50;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .produtor a i {
+    margin-right: 0.5em;
+  }
   
